@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достопримечательности Гомеля</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Достопримечательности Гомеля</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="parks.html">Парки</a></li>
+                <li><a href="museums.html">Музеи</a></li>
+                <li><a href="historical_sites.html">Исторические места</a></li>
+                <li><a href="events.html">События</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Добро пожаловать в Гомель!</h2>
+        <p>Гомель — один из красивейших городов Беларуси, известный своей богатой историей и культурой. Здесь вы найдете множество достопримечательностей, которые стоит посетить.</p>
+        <section>
+            <h3>Краткий обзор</h3>
+            <p>Гомель славится своими парками, музеями и историческими памятниками. Город показывает сочетание старинной архитектуры и современных элементов. Узнайте больше о его достопримечательностях в наших разделах.</p>
+            <div class="gallery">
+                <img src="гомель.jpg" alt="Гомель" onclick="openModal(this)">
+                <img src="парк.jpg" alt="Достопримечательность 2" onclick="openModal(this)">
+                <img src="музей.jpg" alt="Достопримечательность 3" onclick="openModal(this)">
+                <img src="памятник.jpg" alt="Достопримечательность 4" onclick="openModal(this)">
+            </div>
+        </section>
+
+        <div class="modal" id="modal" onclick="closeModal()">
+            <img id="modalImage" src="" alt="">
+        </div>
+
+        <script>
+            function openModal(img) {
+                const modal = document.getElementById("modal");
+                const modalImage = document.getElementById("modalImage");
+                modalImage.src = img.src;
+                modal.style.display = "flex";
+            }
+
+            function closeModal() {
+                const modal = document.getElementById("modal");
+                modal.style.display = "none";
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Достопримечательности Гомеля</p>
+    </footer>
+</body>
+</html>
